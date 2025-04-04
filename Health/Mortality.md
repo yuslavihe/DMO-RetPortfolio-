@@ -1,8 +1,7 @@
 ## Survival Probability and Health Economic Assessment: Patient Profile 'Zhang Wei'
 
-### Executive Summary
-
-This report provides an estimated survival probability analysis for a representative patient profile, 'Zhang Wei' (Male, born 1948, currently 75 years old), who presents with multiple common chronic comorbidities including Hypertension, Type 2 Diabetes Mellitus (T2DM) with Diabetic Nephropathy, Heart Failure with Preserved Ejection Fraction (HFpEF), Cerebral Small Vessel Disease (CSVD), Mild Cognitive Impairment (MCI), Hepatic Steatosis, and Cholelithiasis. Baseline survival is derived from standard Chinese mortality tables, adjusted based on the cumulative impact of these conditions using published hazard ratios. The analysis indicates a significantly reduced survival probability compared to the general male population of the same age. Furthermore, the report discusses the implications for Quality-Adjusted Life Years (QALYs) and the cost-effectiveness of managing these conditions, highlighting the substantial potential health and economic value of effective interventions.
+Sample health report 
+Health/Files/Sample Health Report.jpeg
 
 ### Patient Profile Recap: Zhang Wei
 
