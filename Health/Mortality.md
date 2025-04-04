@@ -59,40 +59,4 @@ The following table presents the estimated annual and cumulative survival probab
 
 Visual Representation:
 
-```svg
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <title>Estimated Cumulative Survival Probability (Age 65-83)</title>
-  <!-- Axes -->
-  <line x1="50" y1="350" x2="550" y2="350" stroke="black" stroke-width="1"/> <!-- X-axis -->
-  <line x1="50" y1="50" x2="50" y2="350" stroke="black" stroke-width="1"/> <!-- Y-axis -->
-  <!-- Y-axis Labels -->
-  <text x="10" y="55" font-family="Arial" font-size="10">1.0</text>
-  <text x="10" y="110" font-family="Arial" font-size="10">0.8</text>
-  <text x="10" y="165" font-family="Arial" font-size="10">0.6</text>
-  <text x="10" y="220" font-family="Arial" font-size="10">0.4</text>
-  <text x="10" y="275" font-family="Arial" font-size="10">0.2</text>
-  <text x="10" y="330" font-family="Arial" font-size="10">0.0</text>
-  <text x="20" y="30" font-family="Arial" font-size="12" font-weight="bold">Survival Probability</text>
-  <!-- X-axis Labels -->
-  <text x="50" y="370" font-family="Arial" font-size="10">65</text>
-  <text x="125" y="370" font-family="Arial" font-size="10">70</text>
-  <text x="200" y="370" font-family="Arial" font-size="10">75</text>
-  <text x="275" y="370" font-family="Arial" font-size="10">80</text>
-  <text x="340" y="370" font-family="Arial" font-size="10">83</text> <!-- Adjusted position for 83 -->
-   <text x="450" y="370" font-family="Arial" font-size="10">Age</text>
-   <text x="250" y="385" font-family="Arial" font-size="12" font-weight="bold">Age (Years)</text>
-
-  <!-- Baseline Survival Data Points (Scaled Y = 50 + (1 - Probability) * 300) -->
-  <polyline points="
-    50,50 70,56.6 90,63.6 110,71.1 130,79.0 150,85.1 170,94.7 190,106.0 210,119.1 230,134.7 
-    250,152.7 270,172.2 290,193.2 310,216.8 330,242.7 350,270.8 370,300.0 390,331.0 410,365.1 
-  " fill="none" stroke="blue" stroke-width="2"/>
-
-  <!-- Adjusted Survival Data Points (Scaled Y = 50 + (1 - Probability) * 300) -->
-  <polyline points="
-    50,50 70,74.9 90,99.9 110,130.1 130,165.1 150,203.6 170,248.4 190,297.5 210,350.3 230,407.5
-    250,474.4 270,541.2 290,608.9 310,677.8 330,747.8 350,818.5 370,889.0 390,958.8 410,1000
-  " fill="none" stroke="red" stroke-width="2"/> <!-- Adjusted polyline to map probability to Y coordinate -->
- <polyline points="
-    50,50 70,74.99 90,99.87 110,130.08 130,165.06 150,203.61 170,248.43 190,297.51 210,350.25 230,407.52
-    250,474.4 270,541.17 290,608.94 310,677.76 330,747.78 350,818.55 370
+![Estimated Survival Probability (Age 65-83)](Estimated%20Survival%20Probability%20(Age%2065-83).svg)
