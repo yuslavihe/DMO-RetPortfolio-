@@ -59,4 +59,4 @@ The following table presents the estimated annual and cumulative survival probab
 
 Visual Representation:
 
-![Estimated Survival Probability (Age 65-83)](Estimated%20Survival%20Probability%20(Age%2065-83).svg)
+![Estimated Cumulative Survival Probability (Age 65-83)](Estimated%20Cumulative%20Survival%20Probability%20(Age%2065-83).svg)
