@@ -74,7 +74,7 @@ The following table compares the estimated baseline survival probabilities for C
 | 83      | 0.108777                                | 0.891223                                    | 0.3780                                                                | 0.413353                                                        | 0.586647                                                | 0.0163                                                                            |
 *Note: Baseline qₓ from China Life Insurance Mortality Table (1990-1993), Male, Non-pension. Adjusted q'ₓ calculated as Baseline qₓ \* 3.8 (capped at 1.0). Cumulative survival S(x) represents the probability of surviving from age 65 to the start of age x.*
 
-![Estimated Cumulative Survival Probability (Age 65-83)](Health/Files/Estimated%20Cumulative%20Survival%20Probability%20(Age%2065-83).svg)
+![Estimated Cumulative Survival Probability (Age 65-83)](Health/Files/Estimated Cumulative Survival Probability (Age 65-83).svg)
 
 ## Treatment Cost-Effectiveness Analysis (QALY Summary)
 This table summarizes potential treatment options for Zhang Wei's diagnosed conditions based on data synthesized from reference literature. It includes estimated costs (post-insurance, where available), Quality-Adjusted Life Years (QALYs) gained, and cost-effectiveness ratios (Cost/QALY). Lower Cost/QALY ratios generally indicate better value relative to common willingness-to-pay thresholds.
