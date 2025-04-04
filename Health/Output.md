@@ -23,8 +23,9 @@
 *   Current Status (Estimated): Moderately controlled BP and HbA1c, Stage 3 CKD, preserved LVEF, cognitive impairment consistent with MCI.
 
 ## User Health Report
-*   Detailed HTML Report: [Files/Health Report_ Zhang Wei.html](Health/Files/Health%20Report_%20Zhang%20Wei.html) (Provides a patient-friendly version)
 ![Sample Report Image](Files/Sample%20Health%20Report.jpeg)
+*   HTML Report: [Files/Health Report_ Zhang Wei.html](Health/Files/Health%20Report_%20Zhang%20Wei.html)
+
 ## Methodology and Assumptions
 This section outlines the data sources and methods used for the analysis.
 
