@@ -1,4 +1,4 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
   <title>Estimated Cumulative Survival Probability (Age 65-83)</title>
   <!-- Axes -->
   <line x1="50" y1="350" x2="550" y2="350" stroke="black" stroke-width="1"/> <!-- X-axis -->
@@ -20,14 +20,12 @@
   <text x="450" y="370" font-family="Arial" font-size="10">Age</text>
   <text x="250" y="385" font-family="Arial" font-size="12" font-weight="bold">Age (Years)</text>
 
-  <!-- Baseline Survival Data Points (Scaled Y = 50 + (1 - Probability) * 300) -->
+  <!-- Survival Data Points (Scaled Y = 50 + (1 - Probability) * 300) -->
   <polyline points="
     50,50 70,56.6 90,63.6 110,71.1 130,79.0 150,85.1 170,94.7 190,106.0 210,119.1 230,134.7 
     250,152.7 270,172.2 290,193.2 310,216.8 330,242.7 350,270.8 370,300.0 390,331.0 410,350.0
   " fill="none" stroke="blue" stroke-width="2"/>
 
-  <!-- Adjusted Survival Data Points (Scaled Y = 50 + (1 - Probability) * 300) -->
-  <polyline points="
-    50,50 70,74.9 90,99.9 110,130.1 130,165.1 150,203.6 170,248.4 190,297.5 210,350.3 230,400.0
-  " fill="none" stroke="red" stroke-width="2"/> <!-- Adjusted polyline to map probability to Y coordinate -->
+
+  
 </svg>
