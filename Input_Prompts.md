@@ -33,7 +33,7 @@ Instructions:
         *   Treatment options for each diagnosed condition.
 3.  Perform QALY Analysis for Treatment Options: For each diagnosed disease/condition:
     *   Research and list viable treatment methods.
-    *   Generate a QALY (Quality-Adjusted Life Year) matrix using Python code.
+    *   Generate a QALY (Quality-Adjusted Life Year) matrix using Python code. (See also Prompt 2 for detailed QALY data handling if needed).
     *   Matrix Contents:
         *   Treatment method name.
         *   Cost in RMB (after government medical insurance coverage).
@@ -46,10 +46,9 @@ Instructions:
         *   Include comments for clarity.
     *   Output: Include both the Python code and the resulting QALY matrices.
 4.  Generate Mortality Probability Statistics:
-    *   Create a table showing age (65-85) and corresponding survival probabilities.
-    *   Use Python code to generate this data based on standard actuarial tables.
-    *   Present this information clearly and non-alarmingly.
-    *   Output: Include both the Python code and the resulting mortality table.
+    *   Use Python code to generate mortality probability data based on standard actuarial tables. (See also Prompt 3 for specific table generation).
+    *   The data should cover ages 65-85 showing corresponding survival probabilities.
+    *   Output: Include both the Python code and the resulting mortality table. Incorporate this information clearly and non-alarmingly into the main health report.
 5.  Provide References:
     *   Compile a comprehensive list of references for:
         *   Clinical information used.
@@ -116,3 +115,63 @@ Instructions:
           </uncertainty_analysis>
         </data_cleaning_report>
         ```
+
+Important Constraints:
+
+*   Transparency: Always document assumptions clearly.
+*   Conservatism: Prefer conservative estimation methods.
+*   Bias Avoidance: Avoid introducing bias through imputation.
+*   Rationale: Provide clear justification for each imputation decision.
+
+---
+
+## Prompt 3: Mortality Probability Table Generation
+
+Goal: Generate a table showing age-specific survival probabilities based on standard actuarial data.
+
+AI Role: You are a data analysis assistant capable of retrieving and processing statistical data.
+
+Task: Create a clear table displaying survival probabilities for a specified age range using Python.
+
+Instructions:
+
+1.  Data Source: Use standard actuarial life tables (e.g., from a public health agency, social security administration, or reputable demographic research source). Clearly state the source used.
+2.  Age Range: Generate data for ages 65 through 85, inclusive.
+3.  Metric: Calculate and display the survival probability for each year within the specified age range. This typically represents the probability of an individual of a given age surviving to the next year, or cumulative survival from a base age. Specify which probability is being presented.
+4.  Technology: Use Python (libraries like `pandas` recommended) to process the data and generate the table.
+5.  Output Format:
+    *   Provide the commented Python code used for data retrieval/calculation and table generation.
+    *   Present the final data as a clean, readable table (e.g., Markdown table or structured output) with columns for 'Age' and 'Survival Probability'.
+    *   Include a brief note about the source and year of the actuarial data used.
+
+Example Output Structure:
+
+```python
+# Python code to generate mortality table
+# Source: [Name of Actuarial Table Source and Year]
+import pandas as pd
+
+# ... (code for data loading/calculation) ...
+
+# Create DataFrame
+data = {'Age': [65, 66, ..., 85], 'Survival Probability': [prob_65, prob_66, ..., prob_85]}
+mortality_table = pd.DataFrame(data)
+
+print(mortality_table.to_markdown(index=False))
+```
+
+```markdown
+| Age | Survival Probability |
+|-----|----------------------|
+| 65  | 0.XXXXX              |
+| 66  | 0.XXXXX              |
+| ... | ...                  |
+| 85  | 0.XXXXX              |
+
+*Data based on [Name of Actuarial Table Source and Year]. Survival probability represents [e.g., the probability of surviving to the next birthday].*
+```
+
+Constraints:
+
+*   Ensure the data source is credible and cited.
+*   Present the information in a neutral, factual manner.
