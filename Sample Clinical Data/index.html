@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Medical Examination Reports (65-83)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <header class="mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 12H12M15 12H12M12 12V9M12 12V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <h1 class="text-2xl font-semibold">Medical Examination Reports</h1>
+                </div>
+                <div class="text-sm text-gray-500 font-geist-mono">
+                    Report ID: MER-CN-651023
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h2 class="text-lg font-medium mb-3">Patient Information</h2>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Full Name:</span>
+                                <span class="font-medium">Zhang Wei</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Gender:</span>
+                                <span>Male</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Date of Birth:</span>
+                                <span>October 15, 1940</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">ID Number:</span>
+                                <span class="font-geist-mono">3101541094********</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Occupation:</span>
+                                <span>Retired (Former Engineer)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-medium mb-3">Report Details</h2>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Report Series:</span>
+                                <span>Longitudinal Health Assessment</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Time Period:</span>
+                                <span>2005–2023 (Biennial)</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Medical Center:</span>
+                                <span>Shanghai Medical University Hospital</span>
+                            </div>
+                            <div class="flex">
+                                <span class="w-32 text-gray-500">Reports Format:</span>
+                                <span>Clinical Investigation Summary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="mb-6">
+            <div class="flex items-center mb-4">
+                <h2 class="text-xl font-semibold">Examination Reports Timeline</h2>
+                <div class="ml-auto">
+                    <select id="filterReports" class="border border-gray-300 rounded-md px-3 py-1 text-sm bg-white">
+                        <option value="all">All Reports</option>
+                        <option value="abnormal">Abnormal Results Only</option>
+                        <option value="blood-pressure">Blood Pressure</option>
+                        <option value="glucose">Blood Glucose</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <div class="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-green-400 to-red-500 rounded-full"></div>
+                <div id="reports-container" class="space-y-6 pl-6">
+                    <!-- Reports will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="diagnosticModal" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden flex items-center justify-center">
+            <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto m-4">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold" id="modalTitle">Diagnostic Test Details</h3>
+                        <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="modalContent">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-sm text-gray-500 py-4">
+            <p>Built with <a href="https://flowith.net" target="_blank" class="text-blue-600 hover:underline">Flowith Oracle</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
