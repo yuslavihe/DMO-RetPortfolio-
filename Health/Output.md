@@ -1,23 +1,13 @@
-
-# Survival Probability and Health Economic Assessment: Patient Profile 'Zhang Wei'
-
 ## Report Overview
 *   Patient: Zhang Wei, Male, Age 75 (as of 2023)
 *   Focus: This report provides an estimated survival probability for the patient, adjusted for diagnosed comorbidities, and a summary of the cost-effectiveness (based on QALYs) of potential treatments for these conditions, synthesized from reference literature.
 *   Key Outputs: Adjusted Survival Probability Table, Treatment Cost-Effectiveness (QALY) Matrix.
 
-## Supporting Files
-*   Detailed HTML Report: [Health/Files/Health Report_ Zhang Wei.html](Health/Files/Health%20Report_%20Zhang%20Wei.html) (Provides a patient-friendly version)
-*   Sample Report Visual: [Health/Files/Sample Health Report.jpeg](Health/Files/Sample%20Health%20Report.jpeg)
-*   Survival Visualization: *(Placeholder: An SVG visualization comparing Baseline and Adjusted Survival Curves would be inserted here)*
-    ```svg
-    <!-- SVG code for survival curve visualization would go here -->
-    <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="200" style="fill:rgb(240,240,240);stroke-width:1;stroke:rgb(0,0,0)" />
-      <text x="50" y="100" font-family="Verdana" font-size="12" fill="blue">Placeholder for Survival Curve Graph</text>
-      <text x="50" y="120" font-family="Verdana" font-size="10" fill="gray">(Baseline vs. Adjusted for Zhang Wei)</text>
-    </svg>
-    ```
+## Execution Details
+*   Agent Used: Oracle Agent
+*   Date: April 4, 2025
+*   Total Execution Time: 41 min
+*   Ultra Agent Units Used: 26
 
 ## Patient Profile Summary
 *   Demographics: Male, Born 1948 (Age 75 as of 2023)
@@ -32,6 +22,9 @@
     *   Heart Failure with Preserved Ejection Fraction (HFpEF) (since ~age 73)
 *   Current Status (Estimated): Moderately controlled BP and HbA1c, Stage 3 CKD, preserved LVEF, cognitive impairment consistent with MCI.
 
+## User Health Report
+*   Detailed HTML Report: [Health/Files/Health Report_ Zhang Wei.html](Health/Files/Health%20Report_%20Zhang%20Wei.html) (Provides a patient-friendly version)
+![Sample Report Image](Health/Files/Sample%20Health%20Report.jpeg)
 ## Methodology and Assumptions
 This section outlines the data sources and methods used for the analysis.
 
@@ -57,6 +50,7 @@ This section outlines the data sources and methods used for the analysis.
 ## Estimated Survival Probability Analysis (Age 65-83)
 The following table compares the estimated baseline survival probabilities for Chinese males (based on the 1990-1993 reference table) with the adjusted probabilities calculated for Zhang Wei, considering his significant comorbidities via the aggregate Hazard Ratio of 3.8.
 
+
 | Age (x) | Baseline qₓ <br> *(Annual Death Prob.)* | Baseline pₓ <br> *(Annual Survival Prob.)* | Baseline Cumulative Survival S(x) <br> *(Prob. Survival from Age 65)* | Adjusted q'ₓ (≈ qₓ \* 3.8) <br> *(Est. Patient Annual Death Prob.)* | Adjusted p'ₓ <br> *(Est. Patient Annual Survival Prob.)* | Adjusted Cumulative Survival S'(x) <br> *(Est. Patient Prob. Survival from Age 65)* |
 | :-----: | :-------------------------------------: | :-----------------------------------------: | :-------------------------------------------------------------------: | :-------------------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------------------------------------: |
 | 65      | 0.021912                                | 0.978088                                    | 1.0000                                                                | 0.083266                                                        | 0.916734                                                | 1.0000                                                                            |
@@ -79,6 +73,8 @@ The following table compares the estimated baseline survival probabilities for C
 | 82      | 0.099982                                | 0.900018                                    | 0.4200                                                                | 0.379932                                                        | 0.620068                                                | 0.0263                                                                            |
 | 83      | 0.108777                                | 0.891223                                    | 0.3780                                                                | 0.413353                                                        | 0.586647                                                | 0.0163                                                                            |
 *Note: Baseline qₓ from China Life Insurance Mortality Table (1990-1993), Male, Non-pension. Adjusted q'ₓ calculated as Baseline qₓ \* 3.8 (capped at 1.0). Cumulative survival S(x) represents the probability of surviving from age 65 to the start of age x.*
+
+![Estimated Cumulative Survival Probability (Age 65-83)](Health/Files/Estimated%20Cumulative%20Survival%20Probability%20(Age%2065-83).svg)
 
 ## Treatment Cost-Effectiveness Analysis (QALY Summary)
 This table summarizes potential treatment options for Zhang Wei's diagnosed conditions based on data synthesized from reference literature. It includes estimated costs (post-insurance, where available), Quality-Adjusted Life Years (QALYs) gained, and cost-effectiveness ratios (Cost/QALY). Lower Cost/QALY ratios generally indicate better value relative to common willingness-to-pay thresholds.
