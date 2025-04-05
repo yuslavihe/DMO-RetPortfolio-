@@ -1,0 +1,6 @@
+    numpy
+    torch
+    wandb
+    gymnasium
+    scipy
+    stable-baselines3[extra]
